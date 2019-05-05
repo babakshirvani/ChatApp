@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     // variables
