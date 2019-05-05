@@ -32,7 +32,16 @@ class RegisterViewController: UIViewController {
         
         //Set up a new user on Firbase database
         
-        
+        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                //success
+                print("Registration Successful!")
+                self.performSegue(withIdentifier: "goToChat", sender: self)
+            }
+        }
         
         
         
